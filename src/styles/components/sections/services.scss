@@ -1,0 +1,41 @@
+@use '@styles/helpers' as *;
+
+/* Section Services */
+.section-services {
+  &__wrap {
+    padding-block: rem(120) rem(130);
+  }
+
+  &__title {
+    max-inline-size: rem(1036);
+
+    &:not(:last-child) {
+      margin-block-end: rem(40);
+    }
+  }
+
+  &__desc-text {
+    font-size: rem(20);
+    max-inline-size: rem(836);
+
+    &:not(:last-child) {
+      margin-block-end: rem(60);
+    }
+  }
+
+  &__cards {
+    display: grid;
+    gap: rem(30);
+    grid-template-columns: var(--grid-4);
+
+    &:not(:last-child) {
+      margin-block-end: rem(60);
+    }
+
+    > li {
+      .service-card {
+        min-block-size: 100%;
+      }
+    }
+  }
+}

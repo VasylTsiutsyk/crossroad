@@ -1,0 +1,45 @@
+@use '@styles/helpers' as *;
+
+/* Service Card */
+.service-card {
+  --card-px: #{rem(30)};
+  --card-py: #{rem(30)};
+  --card-img-size: #{rem(56)};
+
+  display: block;
+  overflow: hidden;
+  padding: var(--card-py) var(--card-px);
+  background-color: var(--color-white-indigo);
+  color: var(--color-text);
+
+  &__img {
+    block-size: var(--card-img-size);
+
+    &:not(:last-child) {
+      margin-block-end: rem(20);
+    }
+
+    picture {
+      display: contents;
+    }
+
+    img {
+      display: block;
+      object-fit: contain;
+      block-size: 100%;
+      inline-size: auto;
+      max-inline-size: 100%;
+    }
+  }
+
+  &__title {
+    padding-block-end: rem(20);
+    font-size: rem(20);
+    font-weight: 600;
+    border-block-end: rem(1) solid currentcolor;
+
+    &:not(:last-child) {
+      margin-block-end: rem(20);
+    }
+  }
+}
