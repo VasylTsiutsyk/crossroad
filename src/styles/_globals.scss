@@ -59,3 +59,13 @@ body {
     }
   }
 }
+
+/* Decor Title */
+.decor-title {
+  font-family: var(--body-font-family);
+  font-size: rem(14);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: rem(2.24);
+  text-transform: uppercase;
+}
