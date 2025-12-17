@@ -2,10 +2,63 @@
 @use '@styles/helpers' as *;
 
 .hero {
-  --hero-py: 3rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-black-rock);
+  color: var(--color-white);
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-black-20);
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      block-size: 100%;
+      inline-size: 100%;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    inline-size: calc((100vw - var(--content-width)) / 2 * 1.5);
+
+    &--01 {
+      inset-block-end: 0;
+      inset-inline-start: 0;
+    }
+
+    &--02 {
+      inset-block-start: 0;
+      inset-inline-end: 0;
+    }
+
+    img {
+      display: block;
+      object-fit: contain;
+      block-size: auto;
+      inline-size: 100%;
+    }
+  }
 
   &__wrap {
-    padding-block: var(--hero-py);
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-block-size: 100svh;
+    padding-block: fluid(180, 112);
   }
 
   &__header {
@@ -14,6 +67,23 @@
     &:not(:last-child) {
       margin-block-end: var(--mb);
     }
+  }
+
+  &__subtitle {
+    font-size: rem(40);
+    line-height: 1.4;
+
+    &:not(:last-child) {
+      margin-block-end: rem(10);
+    }
+  }
+
+  &__title {
+    font-size: rem(120);
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
+    max-inline-size: rem(1184);
   }
 
   &__body {

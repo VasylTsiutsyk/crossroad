@@ -18,7 +18,8 @@
   flex-direction: column;
   overflow: hidden;
   min-height: 100svh;
-  padding-block-start: var(--header-height);
+
+  // padding-block-start: var(--header-height);
 
   &--visible {
     @include respond-above(md) {

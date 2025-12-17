@@ -1,0 +1,57 @@
+@use '@styles/helpers' as *;
+
+/* Type Card */
+.type-card {
+  position: relative;
+  display: block;
+
+  &__inner {
+    position: relative;
+    display: block;
+    transition: background-color var(--transition-duration);
+
+    @include hover {
+      background-color: var(--color-black-rock);
+
+      &::after {
+        @include show;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-black-20);
+      transition:
+        visibility var(--transition-duration),
+        opacity var(--transition-duration);
+
+      @include hide;
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-block-end: 131.25%;
+
+    img {
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 9;
+    font-size: rem(20);
+    font-weight: 500;
+    line-height: 1.6;
+    text-transform: uppercase;
+    inset-block-start: rem(20);
+    inset-inline-start: rem(15);
+  }
+}
