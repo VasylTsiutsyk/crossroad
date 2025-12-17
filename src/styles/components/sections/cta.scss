@@ -1,0 +1,45 @@
+@use '@styles/helpers' as *;
+
+/* Section CTA */
+.section-cta {
+  &__wrap {
+    padding-block-start: rem(100);
+  }
+}
+
+/* CTA Card */
+.cta-card {
+  --card-px: #{rem(48)};
+  --card-pt: #{rem(68)};
+  --card-pb: #{rem(77)};
+
+  display: block;
+  overflow: hidden;
+  padding: var(--card-pt) var(--card-px) var(--card-pb);
+  background-color: var(--color-black-rock);
+  text-align: center;
+  color: var(--color-white);
+
+  &__title {
+    font-weight: 200;
+    margin-inline: auto;
+    max-inline-size: rem(956);
+
+    &:not(:last-child) {
+      margin-block-end: rem(7);
+    }
+
+    strong {
+      display: block;
+      font-weight: 600;
+    }
+  }
+
+  &__desc-text {
+    font-size: rem(20);
+
+    &:not(:last-child) {
+      margin-block-end: rem(62);
+    }
+  }
+}

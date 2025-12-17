@@ -1,0 +1,79 @@
+@use '@styles/helpers' as *;
+
+/* Section Invest */
+.section-invest {
+  position: relative;
+  background-color: var(--color-white-indigo);
+  color: var(--color-text);
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    picture {
+      display: contents;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      object-position: left bottom;
+      block-size: 100%;
+      inline-size: 100%;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    inline-size: calc((100vw - var(--content-width)) / 2);
+
+    &--01 {
+      transform: translate(0%, -50%);
+      inset-block-start: 0;
+      inset-inline-start: 0;
+    }
+
+    &--02 {
+      transform: translate(0%, 40%);
+      inset-block-end: 0;
+      inset-inline-end: 0;
+    }
+
+    picture {
+      display: contents;
+    }
+
+    img {
+      display: block;
+      object-fit: contain;
+      block-size: auto;
+      inline-size: 100%;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: var(--z-section-inner);
+    padding-block: rem(130) rem(110);
+  }
+
+  &__header {
+    &:not(:last-child) {
+      margin-block-end: rem(40);
+    }
+  }
+
+  &__body {
+    &:not(:last-child) {
+      margin-block-end: rem(48);
+    }
+  }
+
+  &__cards {
+    display: grid;
+    gap: rem(24) fluid(98, 32);
+    grid-template-columns: var(--grid-2);
+  }
+}
