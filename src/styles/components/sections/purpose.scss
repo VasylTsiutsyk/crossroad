@@ -1,0 +1,90 @@
+@use '@styles/helpers' as *;
+
+/* Section Purpose */
+.section-purpose {
+  position: relative;
+
+  &__decor {
+    position: absolute;
+    transform: translateY(50%);
+    inline-size: 25vw;
+    inset-block-end: 0;
+    inset-inline-end: 0;
+
+    img {
+      display: block;
+      object-fit: contain;
+      block-size: auto;
+      inline-size: 100%;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 9;
+    padding-block: rem(240) rem(120);
+  }
+
+  &__row {
+    --col-width: 100%;
+    --col-gap: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-inline: calc(var(--col-gap) / 2 * -1);
+    row-gap: var(--col-gap);
+
+    @include respond-above(md) {
+      --col-width: 50%;
+      --col-gap: 2rem;
+    }
+
+    @include respond-above(2xl) {
+      --col-gap: #{rem(100)};
+    }
+  }
+
+  &__col {
+    flex: 0 0 var(--col-width);
+    max-width: var(--col-width);
+    padding-inline: calc(var(--col-gap) / 2);
+
+    &--img {
+      @include respond-above(md) {
+        --col-width: 46.6%;
+      }
+    }
+
+    &--text {
+      @include respond-above(md) {
+        --col-width: 53.4%;
+      }
+    }
+  }
+
+  &__img {
+    picture {
+      display: contents;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      block-size: 100%;
+      inline-size: 100%;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: rem(40);
+    }
+  }
+
+  &__desc-text {
+    &:not(:last-child) {
+      margin-block-end: rem(50);
+    }
+  }
+}

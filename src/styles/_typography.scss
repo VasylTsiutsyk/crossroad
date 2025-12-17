@@ -134,6 +134,10 @@ h3,
     --text-font-size: #{fluid(18, 16)};
   }
 
+  &--xl {
+    --text-font-size: #{fluid(20, 16)};
+  }
+
   > :is(ul, ol) {
     margin-block: var(--text-list-spacing);
     padding-inline-start: var(--text-list-indent-spacing);
