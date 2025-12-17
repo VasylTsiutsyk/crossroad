@@ -1,0 +1,52 @@
+@use '@styles/helpers' as *;
+
+/* Expertise Hero */
+.expertise-hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-black);
+  color: var(--color-white);
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background: linear-gradient(0deg, rgb(43 42 60 / 60%) 0%, rgb(43 42 60 / 60%) 100%);
+      background-blend-mode: multiply;
+    }
+
+    picture {
+      display: contents;
+    }
+
+    img {
+      position: relative;
+      display: block;
+      object-fit: cover;
+      block-size: 100%;
+      inline-size: 100%;
+      max-block-size: 100%;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-block-size: calc(100svh - var(--header-height));
+    padding-block: rem(42);
+    row-gap: rem(24);
+  }
+
+  &__title {
+    font-weight: 700;
+    max-inline-size: rem(864);
+  }
+}

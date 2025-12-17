@@ -19,12 +19,14 @@
   overflow: hidden;
   min-height: 100svh;
 
-  // padding-block-start: var(--header-height);
-
   &--visible {
     @include respond-above(md) {
       overflow: visible;
     }
+  }
+
+  .inner-page & {
+    padding-block-start: var(--header-height);
   }
 
   > main {

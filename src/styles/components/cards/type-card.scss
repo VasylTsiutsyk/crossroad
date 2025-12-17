@@ -37,6 +37,10 @@
     overflow: hidden;
     padding-block-end: 131.25%;
 
+    picture {
+      display: contents;
+    }
+
     img {
       position: absolute;
       inset: 0;

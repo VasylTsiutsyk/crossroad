@@ -1,0 +1,31 @@
+@use '@styles/helpers' as *;
+
+/* Breadcrumbs */
+.breadcrumbs {
+  --breadcrumbs-gap: #{rem(15)};
+
+  font-size: rem(10);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: rem(5);
+
+  &__list {
+    display: flex;
+    gap: var(--breadcrumbs-gap);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      &:not(:last-child) {
+        display: flex;
+        align-items: center;
+        gap: var(--breadcrumbs-gap);
+
+        &::after {
+          content: '/';
+        }
+      }
+    }
+  }
+}
