@@ -5,7 +5,36 @@
   position: relative;
   overflow: hidden;
 
+  &__bg {
+    position: absolute;
+    inset: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background: linear-gradient(0deg, rgb(0 0 0 / 15%) 0%, rgb(0 0 0 / 15%) 100%);
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    picture {
+      display: contents;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      block-size: 100%;
+      inline-size: 100%;
+      max-block-size: 100%;
+    }
+  }
+
   &__wrap {
+    position: relative;
+    z-index: 9;
     padding-block: rem(81) rem(69);
   }
 
