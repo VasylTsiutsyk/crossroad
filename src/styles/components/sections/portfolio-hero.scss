@@ -1,7 +1,7 @@
 @use '@styles/helpers' as *;
 
-/* Expertise Hero */
-.expertise-hero {
+/* Portfolio Hero */
+.portfolio-hero {
   position: relative;
   overflow: hidden;
   background-color: var(--color-black);
@@ -22,12 +22,7 @@
       mix-blend-mode: multiply;
     }
 
-    picture {
-      display: contents;
-    }
-
     img {
-      position: relative;
       display: block;
       object-fit: cover;
       block-size: 100%;
@@ -41,14 +36,16 @@
     z-index: 9;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-block-size: calc(100svh - var(--header-height));
-    padding-block: rem(42);
-    row-gap: rem(24);
+    justify-content: center;
+    min-block-size: 100svh;
+    padding-block: rem(120);
   }
 
   &__title {
-    font-weight: 700;
-    max-inline-size: rem(864);
+    max-inline-size: rem(1060);
+
+    strong {
+      font-weight: 600;
+    }
   }
 }

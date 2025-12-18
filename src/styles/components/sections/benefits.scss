@@ -1,0 +1,28 @@
+@use '@styles/helpers' as *;
+
+/* Section Benefits */
+.section-benefits {
+  &__wrap {
+    padding-block: rem(50);
+  }
+
+  &__header {
+    &:not(:last-child) {
+      margin-block-end: rem(92);
+    }
+  }
+
+  &__cards {
+    display: grid;
+    gap: rem(60) rem(40);
+    grid-template-columns: var(--grid-3);
+
+    @include respond-below(md) {
+      grid-template-columns: var(--grid-2);
+    }
+
+    @include respond-below(sm) {
+      grid-template-columns: var(--grid-1);
+    }
+  }
+}

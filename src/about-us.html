@@ -7,8 +7,8 @@
 			"enable": "false",
 			"once": "false"
 		},
-		"keywords": "ProjectName Keywords",
-		"description": "ProjectName Description",
+		"keywords": "Crossroad Keywords",
+		"description": "Crossroad Description",
     "bodyClass": "inner-page"
 	}'
 >
@@ -22,29 +22,34 @@
 
   <!-- Main Content -->
   <block name="main">
-    <!-- Section 0: Our Mission (in progress) -->
+    <include src="@pages/about-us/_01-main.html" locals="{}"></include>
+
+    <!-- Section 02: Our Mission (in progress) -->
     <include
       src="html/components/sections/_our-mission.html"
       locals="{}"
     ></include>
 
-    <!-- Section 0: Our Vision (in progress) -->
+    <!-- Section 03: Our Goal (in progress) -->
+    <include
+      src="html/components/sections/_our-goal.html"
+      locals="{}"
+    ></include>
+
+    <!-- Section 04: Our Vision (in progress) -->
     <include
       src="html/components/sections/_our-vision.html"
       locals="{}"
     ></include>
 
-    <!-- Section 0: Investment Strategy & Structuring (in progress) -->
+    <!-- Section 05: Benefits (in progress) -->
     <include
-      src="html/components/sections/_investment-strategy.html"
-      locals="{}"
+      src="html/components/sections/_benefits.html"
+      locals='{ "title": "" }'
     ></include>
 
-    <!-- Section 01: Our Goal (in progress) -->
-    <include
-      src="html/components/sections/_our-goal.html"
-      locals="{}"
-    ></include>
+    <!-- Section 06: CTA (in progress) -->
+    <include src="html/components/sections/_cta.html" locals="{}"></include>
   </block>
 
   <!-- Footer -->

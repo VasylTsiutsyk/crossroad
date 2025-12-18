@@ -1,7 +1,7 @@
 <template
   src="html/templates/main/main.html"
   locals='{
-		"title": "Expertise",
+		"title": "Portfolio",
 		"lang": "en",
 		"preloader": {
 			"enable": "false",
@@ -23,19 +23,10 @@
   <!-- Main Content -->
   <block name="main">
     <!-- Section 01: Hero (in progress) -->
-    <include src="@pages/expertise/_01-hero.html" locals="{}"></include>
+    <include src="html/pages/portfolio/_01-hero.html" locals="{}"></include>
 
-    <!-- Section 02: Investment Strategy & Structuring (in progress) -->
-    <include src="@sections/_investment-strategy.html" locals="{}"></include>
-
-    <!-- Section 03: Benefits (in progress) -->
-    <include
-      src="@sections/_benefits.html"
-      locals='{ "title": "true" }'
-    ></include>
-
-    <!-- Section 04: CTA (in progress) -->
-    <include src="@sections/_cta.html" locals="{}"></include>
+    <!-- Section: Space (in progress) -->
+    <include src="@sections/_space.html" locals='{ "id": "someId" }'></include>
   </block>
 
   <!-- Footer -->

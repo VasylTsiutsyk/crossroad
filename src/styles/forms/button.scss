@@ -11,7 +11,6 @@
   outline: none;
   border: var(--button-border-width) var(--button-border-style) var(--button-border-color);
   border-radius: var(--button-border-radius);
-  min-height: var(--button-height);
   padding: var(--button-py) var(--button-px);
   background: none;
   background-color: var(--button-bg-color);
@@ -19,7 +18,6 @@
   font-size: var(--button-font-size, 1rem);
   font-weight: var(--button-font-weight, 400);
   line-height: var(--button-line-height, 1);
-  white-space: nowrap;
   text-align: center;
   text-transform: uppercase;
   color: var(--button-text-color);
@@ -28,6 +26,8 @@
     background-color var(--transition-duration),
     box-shadow var(--transition-duration),
     color var(--transition-duration);
+  min-block-size: var(--button-height);
+  min-inline-size: 0;
 
   @include when-is(a) {
     text-decoration: none;
@@ -90,6 +90,14 @@
     --button-border-color-active: var(--color-primary);
     --button-bg-color-active: var(--color-primary);
     --button-text-color-active: var(--color-white);
+  }
+
+  &__text {
+    display: block;
+    flex: 1 1 auto;
+    min-inline-size: 0;
+
+    @include text-truncate;
   }
 
   &:not(:disabled, ._disabled) {

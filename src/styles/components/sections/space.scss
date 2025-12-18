@@ -1,0 +1,18 @@
+@use '@styles/helpers' as *;
+
+/* Section Space */
+.section-space {
+  position: relative;
+  overflow: hidden;
+
+  &__wrap {
+    padding-block: rem(81) rem(69);
+  }
+
+  &__card {
+    @include respond-above(md) {
+      margin-inline-start: auto;
+      max-inline-size: rem(828);
+    }
+  }
+}

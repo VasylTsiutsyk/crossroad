@@ -1,0 +1,223 @@
+@use '@styles/helpers' as *;
+
+/* Space Card */
+.space-card {
+  --card-border-radius: #{rem(2)};
+  --card-pt: #{rem(40)};
+  --card-px: #{rem(44)};
+  --card-pb: #{rem(44)};
+  --card-bg-color: var(--color-white-classic-chalk);
+  --card-text-color: #172530;
+  --card-divider-width: #{rem(1)};
+  --card-divider-color: var(--color-gray-orochimaru);
+
+  /* tokens */
+  --card-bg: #f5f3ee;
+  --card-border: rgb(19 19 19 / 18%);
+  --card-divider: rgb(19 19 19 / 14%);
+  --text: #151515;
+  --muted: rgb(21 21 21 / 68%);
+  --accent: #2f6c5b;
+  --accent-ink: #fff;
+  --radius: #{rem(2)};
+  --pad: #{rem(36)};
+  --gap: #{rem(44)};
+  --kicker-size: #{rem(16)};
+  --title-size: #{rem(18)};
+  --value-size: clamp(2.2rem, 3.2vw, 3.4rem);
+
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--card-border-radius);
+  background: var(--card-bg-color);
+  color: var(--card-text-color);
+
+  &__inner {
+    padding: var(--card-pt) var(--card-px) var(--card-pb);
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-block-end: rem(48);
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: rem(24);
+  }
+
+  &__col {
+    flex: 1 1 auto;
+
+    &--stats {
+      @include respond-above(sm) {
+        max-inline-size: rem(372);
+      }
+    }
+
+    &--facts {
+      @include respond-above(sm) {
+        max-inline-size: rem(296);
+      }
+    }
+  }
+
+  &__kicker {
+    font-family: var(--body-font-family);
+    font-size: rem(24);
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-block-end: rem(22);
+    }
+  }
+
+  &__img {
+    picture {
+      display: contents;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      block-size: auto;
+      inline-size: 100%;
+    }
+  }
+
+  &__stat {
+    border-block-start: var(--card-divider-width) solid var(--card-divider-color);
+  }
+
+  &__company {
+    &:not(:last-child) {
+      margin-block-end: rem(45);
+    }
+  }
+
+  &__company-title {
+    font-family: var(--body-font-family);
+    font-size: rem(24);
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-block-end: rem(19);
+    }
+  }
+
+  &__address {
+    display: block;
+    font-family: var(--body-font-family);
+    font-size: rem(16);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__facts-title {
+    font-size: rem(16);
+    font-weight: 600;
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      margin-block-end: rem(24);
+    }
+  }
+
+  &__facts-list {
+    margin: 0;
+  }
+
+  &__fact {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.72;
+
+    &:not(:last-child) {
+      margin-block-end: rem(23);
+    }
+  }
+
+  &__fact-desc {
+    font-weight: 700;
+    color: var(--color-black);
+  }
+}
+
+/* Space Card Stat */
+.space-card-stat {
+  --stat-py: #{rem(8)};
+  --stat-icon-size: #{rem(42)};
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: var(--grid-2);
+
+  &__value {
+    display: flex;
+    font-family: var(--body-font-family);
+    font-size: rem(40);
+    font-weight: 600;
+    line-height: 1.2;
+    padding-block: var(--stat-py);
+
+    &--lg {
+      font-size: rem(60);
+    }
+
+    &:not(:last-child) {
+      border-inline-end: var(--card-divider-width) solid var(--card-divider-color);
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    min-inline-size: 0;
+    padding-inline-start: rem(20);
+  }
+
+  &__icon {
+    display: flex;
+    flex: 0 0 var(--stat-icon-size);
+    overflow: hidden;
+    border-radius: var(--stat-icon-size);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    block-size: var(--stat-icon-size);
+    inline-size: var(--stat-icon-size);
+
+    img {
+      display: block;
+      padding: rem(8);
+      object-fit: contain;
+      block-size: 100%;
+      inline-size: 100%;
+      max-block-size: 100%;
+    }
+  }
+
+  &__label {
+    flex: 1 1 auto;
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.72;
+    min-inline-size: 0;
+  }
+}

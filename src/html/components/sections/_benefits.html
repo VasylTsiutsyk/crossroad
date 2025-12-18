@@ -1,0 +1,89 @@
+<section class="section-benefits" aria-labelledby="sectionBenefitsTitle">
+  <div class="section-benefits__container container">
+    <div class="section-benefits__wrap">
+      <if condition="'[[title]]' !== ''">
+        <div class="section-benefits__header">
+          <h2 class="section-benefits__title" id="sectionBenefitsTitle">
+            Why Invest <strong>With Us</strong>
+          </h2>
+        </div>
+      </if>
+
+      <div class="section-benefits__body">
+        <ul class="section-benefits__cards">
+          <li>
+            <include
+              src="@cards/_benefit-card.html"
+              locals='{ 
+                "id": "01",
+                "num": "01",
+                "title": "Investment Discipline",
+                "description": "Every decision is grounded in thorough analysis and a clear assessment of risks. We commit to projects only when we are confident in their potential and long-term returns."
+              }'
+            ></include>
+          </li>
+
+          <li>
+            <include
+              src="@cards/_benefit-card.html"
+              locals='{ 
+                "id": "02",
+                "num": "02",
+                "title": "Partnership Reliability",
+                "description": "For us, long-term relationships matter more than short-term gains. We build collaboration with investors, banks, and brokers on trust, transparency, and mutual benefit."
+              }'
+            ></include>
+          </li>
+
+          <li>
+            <include
+              src="@cards/_benefit-card.html"
+              locals='{ 
+                "id": "03",
+                "num": "03",
+                "title": "Value Creation",
+                "description": "We see properties not just as buildings, but as assets with growth potential. We invest resources in improvements that truly increase value and make properties more attractive to tenants."
+              }'
+            ></include>
+          </li>
+
+          <li>
+            <include
+              src="@cards/_benefit-card.html"
+              locals='{ 
+                "id": "04",
+                "num": "04",
+                "title": "Capital Efficiency",
+                "description": "We treat capital with the highest level of responsibility. Every dollar invested works to grow the value of our portfolio and support the sustainable development of the company."
+              }'
+            ></include>
+          </li>
+
+          <li>
+            <include
+              src="@cards/_benefit-card.html"
+              locals='{ 
+                "id": "05",
+                "num": "05",
+                "title": "Urban Impact",
+                "description": "Our projects enhance not only financial performance but also the urban environment. By creating modern spaces for business, we increase the appeal of neighborhoods and contribute to the growth of local economies."
+              }'
+            ></include>
+          </li>
+
+          <li>
+            <include
+              src="@cards/_benefit-card.html"
+              locals='{ 
+                "id": "06",
+                "num": "06",
+                "title": "Operational Consistency",
+                "description": "Stable investments are only possible with reliable management. We ensure seamless property operations, take care of our tenants, and maintain high standards of quality at every stage."
+              }'
+            ></include>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
