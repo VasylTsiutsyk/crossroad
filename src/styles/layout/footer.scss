@@ -2,5 +2,158 @@
 @use '@styles/helpers' as *;
 
 .footer {
+  position: relative;
   display: block;
+  overflow: hidden;
+
+  &__wrap {
+    padding-block: rem(72);
+  }
+
+  &__top {
+    &:not(:last-child) {
+      margin-block-end: rem(24);
+    }
+  }
+}
+
+.footer-top {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: rem(24);
+
+    @include respond-above(md) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__info {
+    flex: 1 1 auto;
+    max-inline-size: rem(522);
+  }
+
+  &__heading {
+    font-size: rem(30);
+    font-weight: 300;
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      margin-block-end: rem(19);
+    }
+  }
+
+  &__nav {
+    font-size: rem(20);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  &__menu {
+    column-count: 2;
+
+    > li {
+      &:not(:last-child) {
+        margin-block-end: rem(6);
+      }
+
+      > a {
+        display: block;
+        transition: color var(--transition-duration);
+        padding-block: rem(8);
+
+        @include hover {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    > li {
+      &:not(:last-child) {
+        margin-block-end: rem(28);
+      }
+    }
+  }
+}
+
+.footer-contact {
+  &__label {
+    display: block;
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: 118.75%;
+    text-transform: uppercase;
+    color: var(--color-primary);
+
+    &:not(:last-child) {
+      margin-block-end: rem(3);
+    }
+  }
+
+  &__value {
+    display: block;
+    font-size: rem(20);
+    font-weight: 400;
+    line-height: 2;
+    transition: color var(--transition-duration);
+
+    @include hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.footer-bottom {
+  &__copyright {
+    display: block;
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: 137.5%;
+  }
+}
+
+.footer-subscribe {
+  --input-height: #{rem(66)};
+  --input-px: #{rem(28)};
+  --input-font-size: #{rem(20)};
+  --input-placeholder-color: var(--color-black);
+
+  position: relative;
+
+  &__input {
+    input {
+      padding-inline-end: rem(80) !important;
+    }
+  }
+
+  &__btn {
+    --btn-size: #{rem(40)};
+
+    position: absolute !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: none;
+    border-radius: var(--btn-size);
+    background-color: var(--color-black-rock);
+    color: var(--color-white);
+    transform: translateY(-50%);
+    transition: background-color var(--transition-duration);
+    block-size: var(--btn-size);
+    inline-size: var(--btn-size);
+    inset-block-start: 50%;
+    inset-inline-end: var(--space-6);
+
+    &:not(:disabled) {
+      cursor: pointer;
+
+      @include hover {
+        background-color: var(--color-primary);
+      }
+    }
+  }
 }

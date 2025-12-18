@@ -28,6 +28,14 @@
         filter: none;
       }
     }
+
+    .menu__btn-box {
+      .btn {
+        --button-border-color: var(--color-white);
+        --button-bg-color: var(--color-white);
+        --button-text-color: var(--color-black-rock);
+      }
+    }
   }
 
   &._hidden {
@@ -42,6 +50,14 @@
     .header__logo {
       img {
         filter: none;
+      }
+    }
+
+    .menu__btn-box {
+      .btn {
+        --button-border-color: var(--color-white);
+        --button-bg-color: var(--color-white);
+        --button-text-color: var(--color-black-rock);
       }
     }
   }
