@@ -2,7 +2,7 @@
 @use '@styles/helpers' as *;
 
 .header {
-  --header-py: #{rem(16)};
+  --header-py: #{rem(30)};
 
   position: fixed;
   z-index: var(--z-header);
@@ -10,6 +10,7 @@
   top: 0;
   width: 100%;
   background-color: transparent;
+  color: var(--color-white);
   transition:
     box-shadow var(--transition-duration),
     background-color var(--transition-duration),
@@ -20,12 +21,29 @@
   }
 
   &._scrolled {
-    background-color: var(--color-white);
+    background-color: var(--color-black-rock);
+
+    .header__logo {
+      img {
+        filter: none;
+      }
+    }
   }
 
   &._hidden {
     box-shadow: none;
     transform: translateY(-100%);
+  }
+
+  .inner-page & {
+    background-color: var(--color-black-rock);
+    color: var(--color-white);
+
+    .header__logo {
+      img {
+        filter: none;
+      }
+    }
   }
 
   &__wrap {
@@ -34,7 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: rem(24);
+    gap: var(--space-5);
     padding-block: var(--header-py);
   }
 
@@ -60,6 +78,8 @@
     img {
       vertical-align: top;
       object-fit: contain;
+      filter: brightness(0) invert(1);
+      transition: filter var(--transition-duration);
     }
   }
 
@@ -91,7 +111,7 @@
       width: var(--btn-size);
       height: var(--btn-height);
       background: none;
-      color: var(--color-black);
+      color: var(--color-white);
     }
 
     span,
@@ -202,8 +222,7 @@
 
     @include respond-above(md) {
       align-items: center;
-      justify-content: flex-end;
-      gap: rem(12) rem(36);
+      gap: rem(12) rem(20);
     }
 
     @include respond-below(md) {
@@ -218,8 +237,8 @@
       width: 100%;
       height: 100%;
       padding: calc(var(--header-height, rem(80)) + rem(20)) var(--container-padding) rem(24);
-      background-color: var(--color-white);
-      color: var(--color-black);
+      background-color: var(--color-black-rock);
+      color: var(--color-white);
       transition: left 0.5s;
     }
 
@@ -233,9 +252,15 @@
   &__list {
     @include respond-above(md) {
       display: flex;
+      flex: 1 1 auto;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
       gap: rem(12) rem(24);
+    }
+
+    @include respond-above(2xl) {
+      gap: rem(12) rem(60);
     }
 
     > li {
@@ -294,10 +319,11 @@
         @include respond-above(md) {
           display: inline-block;
           padding: rem(2) rem(4);
-          font-size: rem(16);
-          font-weight: 400;
-          line-height: 1.2;
-          text-transform: capitalize;
+          font-family: var(--font-family-secondary);
+          font-size: rem(15);
+          font-weight: 500;
+          line-height: 2.13;
+          text-transform: uppercase;
           transition: color var(--transition-duration);
 
           @include hover {
