@@ -1,0 +1,44 @@
+@use '@styles/helpers' as *;
+
+/* Contact Form */
+.contact-form {
+  display: block;
+
+  &__row {
+    --col-width: 100%;
+    --col-gap-x: #{rem(32)};
+    --col-gap-y: #{rem(24)};
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: calc(var(--col-gap-x) / 2 * -1);
+    row-gap: var(--col-gap-y);
+
+    @include respond-above(md) {
+      --col-width: 50%;
+    }
+  }
+
+  &__col {
+    flex: 0 0 var(--col-width);
+    max-width: var(--col-width);
+    padding-inline: calc(var(--col-gap-x) / 2);
+
+    &--full {
+      @include respond-above(md) {
+        --col-width: 100%;
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: rem(16);
+    font-weight: 300;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-block-end: rem(6);
+    }
+  }
+}

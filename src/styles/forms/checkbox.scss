@@ -4,8 +4,8 @@
 .checkbox {
   --control-gap: #{rem(16)};
   --control-mark-border-width: #{rem(1)};
-  --control-mark-border-color: var(--color-black);
-  --control-mark-size: #{rem(24)};
+  --control-mark-border-color: var(--color-gray-silver);
+  --control-mark-size: #{rem(20)};
 
   position: relative;
   display: flex;
@@ -56,6 +56,7 @@
     display: block;
     flex: 0 0 var(--control-mark-size);
     border: var(--control-mark-border-width) solid var(--control-mark-border-color);
+    border-radius: rem(6);
     width: var(--control-mark-size);
     height: var(--control-mark-size);
     min-width: var(--control-mark-size);

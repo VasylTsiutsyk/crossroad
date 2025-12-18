@@ -8,6 +8,25 @@
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: rem(5);
+  text-transform: uppercase;
+
+  &--dark {
+    color: var(--color-gray-aircraft);
+
+    .breadcrumbs__list {
+      > li {
+        > span {
+          color: var(--color-black);
+        }
+
+        > a {
+          @include hover {
+            color: var(--color-black);
+          }
+        }
+      }
+    }
+  }
 
   &__list {
     display: flex;
@@ -25,6 +44,10 @@
         &::after {
           content: '/';
         }
+      }
+
+      > a {
+        transition: color var(--transition-duration);
       }
     }
   }

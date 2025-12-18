@@ -5,6 +5,7 @@ import { SELECTORS, CLASSES } from './modules/constants';
 import { isWebp, isMobile } from './modules/functions';
 import { initMenu } from './modules/menu';
 import { initHeader } from './modules/header';
+import { initPhoneInputs } from './modules/tel-input';
 
 document.addEventListener('DOMContentLoaded', () => {
   // IS WEBP TEST
@@ -105,6 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
     isScrolled: true,
     isHidden: true,
   });
+
+  // Phone Inputs
+  initPhoneInputs();
 
   SELECTORS.BODY.classList.add(CLASSES.LOADED);
 });

@@ -54,3 +54,25 @@
     }
   }
 }
+
+.iti {
+  display: block !important;
+
+  &__tel-input {
+    border: var(--input-border-width) var(--input-border-style) var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    block-size: var(--input-height);
+    inline-size: 100%;
+
+    @include input-placeholder {
+      color: var(--input-placeholder-color);
+    }
+  }
+
+  &__search-input {
+    border: var(--input-border-width) var(--input-border-style) var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    block-size: var(--input-height);
+    inline-size: 100%;
+  }
+}

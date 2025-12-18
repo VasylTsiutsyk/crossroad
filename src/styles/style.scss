@@ -7,6 +7,12 @@
 // Utils
 @use 'utils';
 
+// Typography
+@use 'typography';
+
+// Globals
+@use 'globals';
+
 // Layout (Header, Footer, Sidebar ...)
 @use 'layout';
 
@@ -18,9 +24,3 @@
 
 // Components
 @use 'components';
-
-// Typography
-@use 'typography';
-
-// Globals
-@use 'globals';

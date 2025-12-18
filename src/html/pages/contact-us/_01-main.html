@@ -4,7 +4,7 @@
   <div class="section-contact__container container">
     <div class="section-contact__wrap">
       <nav
-        class="section-contact__breadcrumbs breadcrumbs"
+        class="section-contact__breadcrumbs breadcrumbs breadcrumbs--dark"
         aria-label="Breadcrumb"
       >
         <ol class="breadcrumbs__list">
@@ -18,8 +18,180 @@
         </ol>
       </nav>
 
+      <div class="section-contact__row">
+        <div class="section-contact__col section-contact__col--text">
+          <div class="section-contact__text">
+            <h3 class="section-contact__title h2">Get in touch</h3>
+
+            <div class="section-contact__desc-text desc-text desc-text--xl">
+              <p>Our friendly team would love to hear from you.</p>
+            </div>
+
+            <form action="#" class="section-contact__form contact-form">
+              <div class="contact-form__row">
+                <div class="contact-form__col">
+                  <div class="contact-form__group">
+                    <label for="firstNameControl" class="contact-form__label">
+                      First name
+                    </label>
+
+                    <div class="contact-form__input input">
+                      <input
+                        type="text"
+                        name="firstName"
+                        id="firstNameControl"
+                        placeholder="First name"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-form__col">
+                  <div class="contact-form__group">
+                    <label for="lastNameControl" class="contact-form__label">
+                      Last name
+                    </label>
+
+                    <div class="contact-form__input input">
+                      <input
+                        type="text"
+                        name="lastName"
+                        id="lastNameControl"
+                        placeholder="Last name"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-form__col contact-form__col--full">
+                  <div class="contact-form__group">
+                    <label for="emailControl" class="contact-form__label">
+                      Email
+                    </label>
+
+                    <div class="contact-form__input input">
+                      <input
+                        type="email"
+                        name="email"
+                        id="emailControl"
+                        placeholder="Email"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-form__col contact-form__col--full">
+                  <div class="contact-form__group">
+                    <label for="phoneNumberControl" class="contact-form__label">
+                      Phone number
+                    </label>
+
+                    <div class="contact-form__input">
+                      <input
+                        type="tel"
+                        name="phoneNumber"
+                        id="phoneNumberControl"
+                        placeholder="Phone number"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-form__col contact-form__col--full">
+                  <div class="contact-form__group">
+                    <label for="messageControl" class="contact-form__label">
+                      Message
+                    </label>
+
+                    <div class="contact-form__input input">
+                      <textarea
+                        rows="7"
+                        name="message"
+                        id="messageControl"
+                        placeholder="Leave us a message..."
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-form__col contact-form__col--full">
+                  <div class="contact-form__group">
+                    <label class="checkbox">
+                      <input type="checkbox" checked />
+
+                      <span class="checkbox__mark" aria-hidden="true"></span>
+                      <span class="checkbox__text">
+                        You agree to our friendly privacy policy.
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="contact-form__col contact-form__col--full">
+                  <div class="contact-form__group">
+                    <button type="submit" class="btn btn--dark">
+                      <span class="btn__text">Send Message</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="section-contact__col section-contact__col--img">
+          <figure class="section-contact__img">
+            <img
+              src="@img/contact-us/01.jpg"
+              alt=""
+              width="970"
+              height="840"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </div>
+
       <ul class="section-contact__cards">
-        <li></li>
+        <li>
+          <include
+            src="@cards/_contact-card.html"
+            locals='{ 
+              "id": "01",
+              "img": "@img/contact-us/cards/01.svg",
+              "title": "Chat to support",
+              "subtitle": "We’re here to help.",
+              "address": "support@crossroad.com"
+            }'
+          ></include>
+        </li>
+
+        <li>
+          <include
+            src="@cards/_contact-card.html"
+            locals='{ 
+              "id": "02",
+              "img": "@img/contact-us/cards/02.svg",
+              "title": "Visit us",
+              "subtitle": "Visit our office HQ.",
+              "address": "245 Market Avenue San Diego CA 92101 US"
+            }'
+          ></include>
+        </li>
+
+        <li>
+          <include
+            src="@cards/_contact-card.html"
+            locals='{ 
+              "id": "03",
+              "img": "@img/contact-us/cards/03.svg",
+              "title": "Call us",
+              "subtitle": "Mon-Fri from 8am to 5pm.",
+              "address": "+1 (123) 456-7890"
+            }'
+          ></include>
+        </li>
       </ul>
     </div>
   </div>

@@ -1,0 +1,60 @@
+@use '@styles/helpers' as *;
+
+/* Contact Card */
+.contact-card {
+  --card-px: #{rem(40)};
+  --card-py: #{rem(40)};
+  --card-img-size: #{rem(64)};
+
+  display: block;
+  overflow: hidden;
+  padding: var(--card-py) var(--card-px);
+  background-color: var(--color-white-indigo);
+  color: var(--color-text);
+
+  &__img {
+    flex: 0 0 var(--card-img-size);
+    block-size: var(--card-img-size);
+    inline-size: var(--card-img-size);
+
+    &:not(:last-child) {
+      margin-block-end: rem(40);
+    }
+
+    img {
+      display: block;
+      object-fit: contain;
+      block-size: 100%;
+      inline-size: 100%;
+    }
+  }
+
+  &__title {
+    font-family: var(--body-font-family);
+    font-size: rem(28);
+    font-weight: 600;
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      margin-block-end: rem(8);
+    }
+  }
+
+  &__subtitle {
+    font-family: var(--body-font-family);
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: var(--body-line-height);
+    text-transform: uppercase;
+    color: var(--color-primary);
+
+    &:not(:last-child) {
+      margin-block-end: rem(20);
+    }
+  }
+
+  &__address {
+    font-size: rem(20);
+    text-wrap: balance;
+  }
+}

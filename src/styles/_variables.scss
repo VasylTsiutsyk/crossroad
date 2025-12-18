@@ -111,6 +111,10 @@
 
   // Gray
   --color-gray: #c8c8c8;
+  --color-gray-silver: #bfbfbf;
+  --color-gray-aircraft: #919397;
+
+  // Other
   --color-wintergreen-dream: #548b81;
 
   /* Semantic */
@@ -182,19 +186,19 @@
   --button-text-color-active: var(--color-white);
 
   /* Input */
-  --input-border-width: 1px;
+  --input-border-width: #{rem(1)};
   --input-border-style: solid;
-  --input-border-color: var(--color-black);
-  --input-border-radius: 0.25rem;
-  --input-height: 3rem;
-  --input-px: 1rem;
+  --input-border-color: var(--color-gray-silver);
+  --input-border-radius: #{rem(2)};
+  --input-height: #{rem(44)};
+  --input-px: #{rem(14)};
   --input-py: 0.5rem;
-  --input-font-size: 1rem;
-  --input-font-weight: 400;
+  --input-font-size: #{rem(16)};
+  --input-font-weight: 300;
   --input-line-height: 1;
   --input-bg-color: var(--color-white);
   --input-text-color: var(--color-black);
-  --input-placeholder-color: var(--color-black-80);
+  --input-placeholder-color: var(--color-gray-silver);
 
   /* Select */
   --select-border-width: 1px;
