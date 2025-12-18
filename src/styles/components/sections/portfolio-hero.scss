@@ -41,6 +41,10 @@
     padding-block: rem(120);
   }
 
+  &__title-wrap {
+    overflow: hidden;
+  }
+
   &__title {
     max-inline-size: rem(1060);
 

@@ -6,6 +6,8 @@ import { isWebp, isMobile } from './modules/functions';
 import { initMenu } from './modules/menu';
 import { initHeader } from './modules/header';
 import { initPhoneInputs } from './modules/tel-input';
+import { initAosAnimations } from './modules/animations';
+import initImgParallax from './modules/img-parallax';
 
 document.addEventListener('DOMContentLoaded', () => {
   // IS WEBP TEST
@@ -109,6 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Phone Inputs
   initPhoneInputs();
+
+  // AOS
+  initAosAnimations();
+
+  // Img Parallax
+  initImgParallax();
 
   SELECTORS.BODY.classList.add(CLASSES.LOADED);
 });

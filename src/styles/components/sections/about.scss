@@ -1,0 +1,107 @@
+@use '@styles/helpers' as *;
+
+/* Section About */
+.section-about {
+  position: relative;
+  overflow: hidden;
+
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+
+    &--01 {
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      max-inline-size: calc((100vw - var(--content-width)) / 2);
+    }
+
+    &--02 {
+      z-index: 11;
+      inset-block-end: 0;
+      inset-inline-end: 0;
+      max-inline-size: calc((100vw - var(--content-width)) / 2 * 1.2);
+    }
+
+    picture {
+      display: contents;
+    }
+
+    img {
+      display: block;
+      height: auto;
+      object-fit: contain;
+      inline-size: 100%;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 9;
+    padding-block: rem(42) rem(100);
+  }
+
+  &__breadcrumbs {
+    &:not(:last-child) {
+      margin-block-end: rem(116);
+    }
+  }
+
+  &__top {
+    &:not(:last-child) {
+      margin-block-end: rem(100);
+    }
+  }
+
+  &__row {
+    --col-width: 100%;
+    --col-gap: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: calc(var(--col-gap) / 2 * -1);
+    row-gap: var(--col-gap);
+
+    @include respond-above(md) {
+      --col-width: 50%;
+      --col-gap: 2rem;
+    }
+
+    @include respond-above(2xl) {
+      --col-gap: #{rem(40)};
+    }
+  }
+
+  &__col {
+    flex: 0 0 var(--col-width);
+    max-width: var(--col-width);
+    padding-inline: calc(var(--col-gap) / 2);
+
+    &--left {
+      @include respond-above(md) {
+        --col-width: 43.5%;
+      }
+    }
+
+    &--right {
+      @include respond-above(md) {
+        --col-width: 56.5%;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__img {
+    overflow: hidden;
+    border-radius: rem(2);
+
+    img {
+      display: block;
+      object-fit: cover;
+      block-size: auto;
+      inline-size: 100%;
+    }
+  }
+}

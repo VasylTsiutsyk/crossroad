@@ -47,6 +47,10 @@
     row-gap: rem(24);
   }
 
+  &__title-wrap {
+    overflow: hidden;
+  }
+
   &__title {
     font-weight: 700;
     max-inline-size: rem(864);
