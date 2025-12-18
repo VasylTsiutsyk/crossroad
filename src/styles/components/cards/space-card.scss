@@ -11,21 +11,6 @@
   --card-divider-width: #{rem(1)};
   --card-divider-color: var(--color-gray-orochimaru);
 
-  /* tokens */
-  --card-bg: #f5f3ee;
-  --card-border: rgb(19 19 19 / 18%);
-  --card-divider: rgb(19 19 19 / 14%);
-  --text: #151515;
-  --muted: rgb(21 21 21 / 68%);
-  --accent: #2f6c5b;
-  --accent-ink: #fff;
-  --radius: #{rem(2)};
-  --pad: #{rem(36)};
-  --gap: #{rem(44)};
-  --kicker-size: #{rem(16)};
-  --title-size: #{rem(18)};
-  --value-size: clamp(2.2rem, 3.2vw, 3.4rem);
-
   position: relative;
   display: block;
   overflow: hidden;
