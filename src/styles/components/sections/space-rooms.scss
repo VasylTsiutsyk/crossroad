@@ -1,0 +1,113 @@
+@use '@styles/helpers' as *;
+
+/* Space Rooms */
+.space-rooms {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-black-rock);
+  color: var(--color-white);
+
+  &__wrap {
+    padding-block: rem(170);
+  }
+
+  &__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--grid-5);
+    border-block-start: rem(1) solid var(--color-gray-orochimaru);
+  }
+
+  &__item {
+    &:first-child {
+      .space-room__text {
+        border-inline-start: rem(1) solid var(--color-gray-orochimaru);
+      }
+    }
+
+    .space-room__text {
+      border-inline-end: rem(1) solid var(--color-gray-orochimaru);
+    }
+  }
+}
+
+.space-room {
+  --room-px: #{rem(24)};
+  --room-py: #{rem(24)};
+  --room-img-size: #{rem(232)};
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(80);
+
+  @include hover {
+    &::after {
+      block-size: 100%;
+    }
+
+    .space-room__img {
+      img {
+        transform: translateZ(0) scale(1.1);
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-primary);
+    pointer-events: none;
+    transition: block-size var(--transition-duration);
+    block-size: 0;
+    inline-size: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: rem(48) rem(20) rem(4);
+    min-block-size: rem(124);
+  }
+
+  &__label {
+    font-size: rem(20);
+    font-weight: 600;
+    line-height: 1.2;
+    text-wrap: balance;
+
+    @include text-shorten(3);
+  }
+
+  &__img-wrap {
+    padding: var(--room-py) var(--room-px);
+  }
+
+  &__img {
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    inline-size: 100%;
+
+    picture {
+      display: contents;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      transform: scale(1.01);
+      transition: transform 0.75s;
+      block-size: 100%;
+      inline-size: 100%;
+      max-block-size: 100%;
+    }
+  }
+}
