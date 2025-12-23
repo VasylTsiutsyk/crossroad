@@ -2,6 +2,12 @@
 
 /* Section Benefits */
 .section-benefits {
+  &--spaced {
+    .section-benefits__wrap {
+      padding-block: rem(100);
+    }
+  }
+
   &__wrap {
     padding-block: rem(50);
   }
