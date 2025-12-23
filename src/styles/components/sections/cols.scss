@@ -2,6 +2,12 @@
 
 /* Section Cols */
 .section-cols {
+  &--decored {
+    .section-cols__wrap {
+      padding-block: rem(200) rem(150);
+    }
+  }
+
   &__wrap {
     padding-block: rem(50);
   }
