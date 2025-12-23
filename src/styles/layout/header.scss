@@ -2,19 +2,19 @@
 @use '@styles/helpers' as *;
 
 .header {
-  --header-py: #{rem(30)};
+  --header-py: #{rem(26)};
 
   position: fixed;
   z-index: var(--z-header);
-  left: 0;
-  top: 0;
-  width: 100%;
   background-color: transparent;
   color: var(--color-white);
   transition:
     box-shadow var(--transition-duration),
     background-color var(--transition-duration),
     transform var(--transition-duration);
+  inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
 
   @include respond-below(md) {
     --header-py: #{rem(12)};
