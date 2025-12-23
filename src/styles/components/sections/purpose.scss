@@ -80,9 +80,15 @@
     &:not(:last-child) {
       margin-block-end: rem(40);
     }
+
+    strong {
+      display: block;
+    }
   }
 
   &__desc-text {
+    max-inline-size: rem(618);
+
     &:not(:last-child) {
       margin-block-end: rem(50);
     }
