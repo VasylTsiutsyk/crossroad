@@ -73,7 +73,7 @@
 
   &__cards {
     display: grid;
-    gap: rem(24) fluid(98, 32);
+    gap: rem(32) fluid(98, 32);
     grid-template-columns: var(--grid-2);
   }
 }
