@@ -1,0 +1,38 @@
+@use '@styles/helpers' as *;
+
+/* CTA Card */
+.cta-card {
+  --card-px: #{rem(48)};
+  --card-pt: #{rem(72)};
+  --card-pb: #{rem(76)};
+
+  display: block;
+  overflow: hidden;
+  padding: var(--card-pt) var(--card-px) var(--card-pb);
+  background-color: var(--color-black-rock);
+  text-align: center;
+  color: var(--color-white);
+
+  &__title {
+    font-weight: 200;
+    margin-inline: auto;
+    max-inline-size: rem(956);
+
+    &:not(:last-child) {
+      margin-block-end: rem(16);
+    }
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__desc-text {
+    margin-inline: auto;
+    max-inline-size: rem(618);
+
+    &:not(:last-child) {
+      margin-block-end: rem(62);
+    }
+  }
+}
